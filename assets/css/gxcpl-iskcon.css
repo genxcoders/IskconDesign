@@ -23,6 +23,9 @@ body {
 .gxcpl-text-special-left-center {
 	text-align: left;
 }
+.gxcpl-fc-orange {
+	color: #ff8c0f;
+}
 /*Text Settings*/
 
 /*Header*/
@@ -369,6 +372,7 @@ img.gxcpl-floating-logo {
 	padding: 2px;
 	opacity: 0.5;
 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+	z-index: 9999;
 }
 img.gxcpl-floating-logo:hover {
 	opacity: 1;
@@ -404,59 +408,77 @@ img.gxcpl-floating-logo:hover {
 /*Card*/
 
 /*Book Container*/
-.gxcpl-book-container {
+.gxcpl-literature {
 	width: 90%;
-	height: 300px;
+	height: 525px;
 	margin: auto;
 	display: block;
 	background-color: #e2e1e0;
-	border-radius: 4px 4px 0px 0px;
+	border-radius: 4px;
 	border: 1px solid rgba(0,0,0,0.1);
+	position: relative;
+}
+.gxcpl-book-container {
+	width: 100%;
+	height: 300px;
+	z-index: 100;
 	-webkit-box-shadow: inset 0px 0px 20px 2px rgba(0,0,0,0.5);
 	-moz-box-shadow: inset 0px 0px 20px 2px rgba(0,0,0,0.5);
 	box-shadow: inset 0px 0px 20px 2px rgba(0,0,0,0.5);
-	position: relative;
+	border-radius: 4px 4px 0px 0px;
 }
-.gxcpl-book {
-	width: 50%;
-	height: 75%;
+img.gxcpl-book-image {
+	width: 155px;
+	height: 225px;
 	position: absolute;
-	bottom: -50px;
-	right: 0;
+	bottom: 150px;
 	left: 0;
-	margin: auto;
-	display: block;
-	overflow: hidden;
-	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-}
-.gxcpl-book:hover {
-	top: -50px;
-	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-}
-.gxcpl-book > img {
-	width: auto;
-	height: 100%;
-	object-fit: contain;
+	right: 0;
 	margin: auto;
 	display: block;
 	border-radius: 4px;
-	overflow: hidden;
-	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.gxcpl-literature > .gxcpl-book-container > img.gxcpl-book-image {
 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
-.gxcpl-book-container-text {
+.gxcpl-literature:hover > .gxcpl-book-container > img.gxcpl-book-image {
+	bottom: 260px;
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.gxcpl-literature > .gxcpl-book-text-container {
+	width: 100%;
+	height: 225px;
+	z-index: 150;
+	position: absolute;
+	bottom: 0;
 	background-color: #cccccc;
-	width: 90%;
-	height: 150px;
+	border: 1px solid rgba(0,0,0,0.1);
+	border-radius: 0px 0px 4px 4px;
+	padding: 10px;
+}
+/*.gxcpl-literature > .gxcpl-book-text-container > .gxcpl-book-description {
+
+}*/
+/*Book Container*/
+
+/*Testimonial*/
+.gxcpl-testimonial {
+	width: 80%;
+	height: 120px;
+	border: 1px solid rgba(0,0,0,0.1);
 	margin: auto;
 	display: block;
-	border-left: 1px solid rgba(0,0,0,0.1);
-	border-right: 1px solid rgba(0,0,0,0.1);
-	border-bottom: 1px solid rgba(0,0,0,0.1);
-	border-radius: 0px 0px 4px 4px;
-	z-index: 300;
+	border-radius: 60px;
 }
-/*Book Container*/
+.gxcpl-testimonial > #carousel-example-generic-2 > .carousel-control {
+	border-radius: 60px;	
+}
+.gxcpl-testimonial > #carousel-example-generic-2 > .carousel-inner > .item {
+	height: 120px !important;
+	width: 70%;
+	margin: auto;
+}
+/*Testimonial*/
 
 /*Media Queries*/
 @media (min-width: 300px) and (max-width: 500px) {
@@ -533,6 +555,9 @@ img.gxcpl-floating-logo:hover {
 		display: block;
 		border-radius: 4px;
 		box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	}
+	.gxcpl-literature {
+		width: 100%;
 	}
 }
 /*Media Queries*/
