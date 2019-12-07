@@ -511,6 +511,23 @@ img.gxcpl-book-image {
 }
 /*Map*/
 
+/*Gallery*/
+.gxcpl-gallery-image {
+	width: 100%;
+	height: 160px;
+	object-fit: cover;
+	border: 10px solid rgba(0,0,0,0.3);
+	border-radius: 4px;
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.gxcpl-gallery-image:hover,
+.gxcpl-gallery-image:active,
+.gxcpl-gallery-image:focus, {
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+/*Gallery*/
+
 /*Media Queries*/
 @media (min-width: 300px) and (max-width: 500px) {
 	.heading {
